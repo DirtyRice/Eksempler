@@ -14,7 +14,7 @@ class ViewUsers
      */
     public function __construct()
     {
-        if (isset($_SESSION['username'])) {
+        if ($_SESSION['loggedin']) {
             $this->users = new Users();
             include("./app/views/adminpage.php");
         } else {
